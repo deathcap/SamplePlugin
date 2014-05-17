@@ -54,15 +54,21 @@ public class SamplePlugin extends JavaPlugin {
         PluginDescriptionFile pdfFile = this.getDescription();
         getLogger().info( pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!" );
 
-        getLogger().info("dirt = " + Material.DIRT);
+        getLogger().info("dirt = " + Material.DIRT + ", name = "+Material.DIRT.name()+", ordinal="+Material.DIRT.ordinal());
 
         checkMaterial("STONE");
         checkMaterial("DIRT");
         checkMaterial("SAND");
+        checkMaterial("invalid");
     }
 
     private void checkMaterial(String name) {
         Material m = Material.getMaterial(name);
+        if (m == null) {
+            getLogger().info("got null");
+            return;
+        }
+
         // test switch() on Material enum
         switch (m) {
             case STONE:
