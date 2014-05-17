@@ -37,8 +37,10 @@ public class SamplePlugin extends JavaPlugin {
         pm.registerEvents(blockListener, this);
 
         // Register our commands
+        /* TODO: re-enable after fixing registering commands from plugin.yml
         getCommand("pos").setExecutor(new SamplePosCommand());
         getCommand("debug").setExecutor(new SampleDebugCommand(this));
+        */
 
         // EXAMPLE: Custom code, here we just output some info so we can check all is well
         PluginDescriptionFile pdfFile = this.getDescription();
