@@ -32,9 +32,15 @@ public class SamplePlugin extends JavaPlugin {
         // TODO: Place any custom enable code here including the registration of any events
 
         // Register our events
+        /* TODO: re-enable after fixing UnsatistifiedLinkError
+        getLogger().info("about to registerEvents");
         PluginManager pm = getServer().getPluginManager();
+        getLogger().info("PluginManager = "+pm);
         pm.registerEvents(playerListener, this);
+        getLogger().info("registered playerListener");
         pm.registerEvents(blockListener, this);
+        getLogger().info("registered blockListener");
+        */
 
         // Register our commands
         /* TODO: re-enable after fixing registering commands from plugin.yml
